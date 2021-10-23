@@ -27,9 +27,11 @@ console.log('list controller here')
         listsService.createList(rawList)
         form.reset()
 
-    } 
+    }
+     
     removeList(id){
         listsService.removeList(id)
+        
     }
 
 }

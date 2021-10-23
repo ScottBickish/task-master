@@ -14,10 +14,10 @@ class ListsService{
         const list = new List(listData)
         ProxyState.lists = [list, ...ProxyState.lists]
     }
-
+    
     removeList(id){
         ProxyState.lists = ProxyState.lists.filter(l => l.id != id)
-        // ProxyState.tasks = ProxyState.tasks.filter(t => t.listId != id)
+        ProxyState.tasks = ProxyState.tasks.filter(t => t.listid != id)
     }
 
 

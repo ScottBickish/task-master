@@ -4,7 +4,7 @@ import { ListsController } from "./Controllers/ListsController.js"
 class App {
   // valuesController = new ValuesController();
   tasksController = new TasksController()
-  listController = new ListsController()
+  listsController = new ListsController()
 }
 
 window["app"] = new App();
