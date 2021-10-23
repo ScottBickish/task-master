@@ -1,11 +1,11 @@
 import { ProxyState } from "../AppState.js"
-
+import { Task } from "../Models/Task.js"
 
 
 
 class TasksService{
     constructor(){
-        console.log('service here')
+        console.log('task service here')
     }
 
 
