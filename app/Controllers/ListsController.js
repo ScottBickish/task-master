@@ -12,8 +12,9 @@ function _draw(){
 
 export class ListsController{
     constructor(){
-console.log('list controller here')
+
         ProxyState.on('lists', _draw)
+        ProxyState.on('tasks', _draw)
         _draw
     }
     createList(){

@@ -4,8 +4,12 @@ import { Task } from "../Models/Task.js"
 
 
 class TasksService{
-    constructor(){
-        console.log('task service here')
+    
+    createTask(rawTask){
+        // debugger
+        console.log(rawTask, 'task data in service')
+        const task = new Task(rawTask)
+        ProxyState.tasks = [...ProxyState.tasks,task]
     }
 
 

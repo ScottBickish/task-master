@@ -31,32 +31,16 @@
 
         <div class="col-12 text-center">
           <form onsubmit="app.listsController.createList()">
-            <input id="listname" type="text" placeholder="List Name..." required>
-            <button type="submit">Create</button>
-            <input type="color" value="#28bbbd" id="color">
+            <input id="listname" type="text" placeholder="List Name..."  required minlength="3" maxlength="15">
+            <button title="Create list yo!" type="submit">Create</button>
+            <input title="Pick a color" type="color" value="#28bbbd" id="color">
           </form>
         </div>
       </div>
     </div>
     <div class="row container mt-2" id="list">
       <div>
-    <!-- <div class=" container mt-2">
-      <div class="col-md-4">
-        <div class="card text-center mb-0">
-          <p class="m-0" id="list" >groceries </p>
-          <p class="m-0">1<span>/</span><span>4</span></p>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-          <input type="text" placeholder="Add a task..."><button>Add</button>
-          <button>Delete list</button>
-        </div>
-
-      </div>
-    </div> -->
+   
 
   </main>
   <footer class="bg-dark text-light">

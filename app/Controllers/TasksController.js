@@ -8,6 +8,20 @@ export class TasksController{
 
         
     }
+       
+    createTask(listId){
+        
+        window.event.preventDefault()
+        const form = window.event.target
+        let rawTask = {
+            taskname: form.taskname.value,
+            listId: listId
+        }
+
+        tasksService.createTask(rawTask)
+        console.log('create task', rawTask)
+        form.reset()
+    }
     
 
 }

@@ -4,15 +4,17 @@ import { ProxyState } from "../AppState.js"
 
 export class Task{
     constructor(data){
-        this.id = generateId()
-        this.task = data.task
-        this.listid = data.listid
+        this.id = data.id || generateId()
+        this.taskname = data.taskname
+        this.listId = data.listId
 
     }
 
     get Template(){
         return `
         
-        <li>${this.task}</li>`
+        <li>${this.taskname}<button class="bg-danger">X</button></li>`
     }
+
+    
 }
