@@ -1,6 +1,7 @@
 import { ProxyState } from "../AppState.js"
-// import { loadState, saveState } from "../Utils/LocalStorage.js";
+import { loadState, saveState } from "../Utils/LocalStorage.js";
 import{ listsService } from "../Services/ListsService.js"
+
 
 function _draw(){
     const lists = ProxyState.lists
@@ -14,7 +15,10 @@ export class ListsController{
     constructor(){
 
         ProxyState.on('lists', _draw)
+        ProxyState.on('lists', saveState)
         ProxyState.on('tasks', _draw)
+        ProxyState.on('tasks', saveState)
+        loadState()
         _draw
     }
     createList(){
@@ -34,5 +38,6 @@ export class ListsController{
         listsService.removeList(id)
         
     }
+    
 
 }

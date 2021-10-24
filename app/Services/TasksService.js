@@ -11,7 +11,11 @@ class TasksService{
         const task = new Task(rawTask)
         ProxyState.tasks = [...ProxyState.tasks,task]
     }
-
+deleteTask(id){
+    
+    ProxyState.tasks = ProxyState.tasks.filter(t => t.listId != id)
+    console.log('clicked the x in service controller');
+}
 
 
 }

@@ -22,7 +22,10 @@ export class TasksController{
         console.log('create task', rawTask)
         form.reset()
     }
-    
+    deleteTask(id){
+        tasksService.deleteTask(id)
+        console.log('clicked the x in tc')
+    }
 
 }
 

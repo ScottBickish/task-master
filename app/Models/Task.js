@@ -13,7 +13,7 @@ export class Task{
     get Template(){
         return `
         
-        <li>${this.taskname}<button class="bg-danger">X</button></li>`
+      <input type="checkbox">  ${this.taskname}<button onclick="app.tasksController.deleteTask('${this.id}')" class="bg-danger">X</button>`
     }
 
     
