@@ -33,9 +33,11 @@ export class ListsController{
         form.reset()
 
     }
-     
     removeList(id){
-        listsService.removeList(id)
+      if(window.confirm('hey! are you sure you want to delete this awesome list?'))  {
+          listsService.removeList(id)
+
+      }
         
     }
     

@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js"
 import { Task } from "../Models/Task.js"
+import { loadState, saveState } from "../Utils/LocalStorage.js"
 
 
 
@@ -13,8 +14,22 @@ class TasksService{
     }
 deleteTask(id){
     
-    ProxyState.tasks = ProxyState.tasks.filter(t => t.listId != id)
-    console.log('clicked the x in service controller');
+    ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
+    
+}
+
+checkBox(id){
+    
+let approved = ProxyState.tasks.find(t => t.id === id)
+approved.checked = !approved.checked
+console.log(approved.checked)
+saveState()
+
+ProxyState.tasks = ProxyState.tasks
+
+
+
+
 }
 
 

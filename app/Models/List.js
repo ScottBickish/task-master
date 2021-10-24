@@ -16,13 +16,14 @@ get Template(){
        <div class="card text-center mb-0" style="background-color: ${this.color}">
           <p class="m-0"><b>${this.listname}</b></p> 
           <p class="m-0">1<span>/</span><span>4</span></p>
-          <ul>
+         <div class="row container">
+         
             ${this.gettasks()} 
-          </ul>
+          </div>
           <form onsubmit="app.tasksController.createTask('${this.id}')">
-          <input type="text" id="taskname" name="taskname" class="form-control" placeholder="Add a task..." required minlength="3" maxlength="50"><button title="Add!" type="submit">Add</button>
+          <input type="text" id="taskname" name="taskname" class="form-control" placeholder="Add a task..." required minlength="3" maxlength="50"><button class="rounded" title="Add!" type="submit">Add</button>
           </form>
-          <button class="bg-danger" onclick="app.listsController.removeList('${this.id}')">Delete list</button>
+          <button class="bg-danger rounded" onclick="app.listsController.removeList('${this.id}')">Delete list</button>
       </div>
  
     </div>

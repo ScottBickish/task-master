@@ -1,13 +1,22 @@
 import { ProxyState } from "../AppState.js"
 import{ tasksService } from "../Services/TasksService.js"
+import { saveState } from "../Utils/LocalStorage.js"
 
+
+
+// function _draw(){
+//     checkBox()
+//     saveState()
+// }
 
 
 export class TasksController{
     constructor(){
-
+       
+        // ProxyState.on('tasks',_draw )
         
     }
+    
        
     createTask(listId){
         
@@ -23,9 +32,17 @@ export class TasksController{
         form.reset()
     }
     deleteTask(id){
-        tasksService.deleteTask(id)
-        console.log('clicked the x in tc')
-        window.confirm('are you for real???')
+        if(window.confirm('are you for real???')){
+             tasksService.deleteTask(id)
+       
+        }
+       
+    }
+
+    checkBox(id){
+        tasksService.checkBox(id)
+       
+        
     }
 
 }
