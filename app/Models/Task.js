@@ -4,7 +4,7 @@ import { ProxyState } from "../AppState.js"
 
 export class Task{
     constructor(data){
-        this.id = data.id || generateId()
+        this.id = data.id || generateId(),
         this.taskname = data.taskname
         this.listId = data.listId
 
@@ -13,8 +13,10 @@ export class Task{
     get Template(){
         return `
         
-      <input type="checkbox">  ${this.taskname}<button onclick="app.tasksController.deleteTask('${this.id}')" class="bg-danger">X</button>`
-    }
+      <input type="checkbox" id="chkbox" >  ${this.taskname}<button onclick="app.tasksController.deleteTask('${this.id}')" class="bg-danger">X</button>`
+    
 
+    }
+   
     
 }

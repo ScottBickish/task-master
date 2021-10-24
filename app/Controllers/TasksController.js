@@ -25,6 +25,7 @@ export class TasksController{
     deleteTask(id){
         tasksService.deleteTask(id)
         console.log('clicked the x in tc')
+        window.confirm('are you for real???')
     }
 
 }
