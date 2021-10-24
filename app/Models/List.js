@@ -15,7 +15,7 @@ get Template(){
     <div class="col-md-4 my-3">
        <div class="card text-center mb-0" style="background-color: ${this.color}">
           <p class="m-0"><b>${this.listname}</b></p> 
-          <p class="m-0">1<span>/</span><span>4</span></p>
+          <p class="m-0">${this.Tasksleft}<span>/</span><span>${this.AllTasks}</span></p>
          <div class="row container">
          
             ${this.gettasks()} 
@@ -43,7 +43,14 @@ gettasks(){
   
 }
 
-
+get AllTasks(){
+  let totalTasks = ProxyState.tasks.filter(banana => banana.listId === this.id)
+  return totalTasks.length
+}
+get Tasksleft(){
+  let tasksremaining = ProxyState.tasks.filter(split => split.listId === this.id && split.checked == false)
+  return tasksremaining.length
+}
 
 }
 
