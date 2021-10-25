@@ -22,6 +22,6 @@ export function loadState(){
     
     ProxyState.lists = data.lists.map(l => new List(l))
     // ProxyState.tasks = data.tasks.map(task => new Task(task.id, task.taskname, task.listId, task.checked))
-     ProxyState.tasks = data.tasks.map(t => new Task(t, t.checked))
+     ProxyState.tasks = data.tasks.map(t => new Task(t))
 }
 }

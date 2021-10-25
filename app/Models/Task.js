@@ -9,11 +9,11 @@ export class Task{
     //     this.listId = listId
     //     this.checked = checked
     // }
-    constructor(data, checked = false){
+    constructor(data){
         this.id = data.id || generateId()
         this.taskname = data.taskname
         this.listId = data.listId
-        this.checked = checked
+        this.checked = data.checked
       
 
 
